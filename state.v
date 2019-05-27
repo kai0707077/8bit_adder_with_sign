@@ -6,31 +6,23 @@ module state(
     input reset,
 	input clk_prs, // for deteced btn
 	input [3:0] btn_de,
-	//input [7:0] sw_de,
 	
-	output reg load,
-	output reg add_sub,
-	output reg select //
-    //output state
+	output reg load,           //for register
+	output reg add_sub,        //for add or minus
+	output reg select          //for display sum
 
 );
 
-//assign reset=btn_de[0];
-
 reg [2:0] state;
 reg [2:0] next;
-
-//reg load;    //for register
-//reg add_sub; //for add or minus
-//reg select;  //for display sum
 
 parameter [2:0]IDLE     = 3'b000, 
                LOAD_ADD = 3'b001,
                LOAD_SUB = 3'b010,
                WAIT1    = 3'b011,
-			   WAIT2    = 3'b100,
-			   ADD_RESL	= 3'b101,
-			   SUB_RESL	= 3'b110;
+	       WAIT2    = 3'b100,
+	       ADD_RESL	= 3'b101,
+	       SUB_RESL	= 3'b110;
 
     
 always @(posedge clk_prs or posedge reset)
