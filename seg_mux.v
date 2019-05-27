@@ -18,16 +18,16 @@ always@(sel)
        		4'b1101:x=result[7:4];
        		4'b1011:x=result[11:8];
        		4'b0111:x=result[15:12];	 
-	endcase
+		endcase
 	end
 	
 	else if(sign==0) begin 
-			case(sel)	 
+		case(sel)	 
        		4'b1110:x=result[3:0];
        		4'b1101:x=result[7:4];
        		4'b1011:x=result[11:8];
-       		4'b0111:x=4'hA;
-			endcase
+       		4'b0111:x=4'hA;//negative sign
+		endcase
 	end
 
 
