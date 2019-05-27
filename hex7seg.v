@@ -17,7 +17,7 @@ always @(*)
         4'h7: a_to_g = 7'b0001111;
         4'h8: a_to_g = 7'b0000000;
         4'h9: a_to_g = 7'b0000100;
-        4'hA: a_to_g = 7'b1111110;
+        4'hA: a_to_g = 7'b1111110;//negative sign
         4'hb: a_to_g = 7'b1100000;
         4'hC: a_to_g = 7'b0110001;
         4'hd: a_to_g = 7'b1000010;
