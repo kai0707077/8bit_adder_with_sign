@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 
-
 module adder_top(
 
     input clk,
@@ -65,11 +64,11 @@ count M4(
     .outp(outp),
     .sw(sw),
     .select(select),
-	 .load(load),
-	 .add_sub(add_sub),
+    .load(load),
+    .add_sub(add_sub),
 
     .sel_out(sel_out),
-	 .sign(sign)
+    .sign(sign)
 );
 
 //*
@@ -89,7 +88,7 @@ bin2bcd M6(
 
 scan M7(
 
-	 .clks(clks),
+    .clks(clks),
     .rst(rst),
 
     .sel(sel)
@@ -98,12 +97,12 @@ scan M7(
 
 seg_mux M8(
 
-	.result(final_result),
-	.sel(sel),
-	.rst(rst),
-	.sign(sign),
+    .result(final_result),
+    .sel(sel),
+    .rst(rst),
+    .sign(sign),
 	
-	.x(x)
+    .x(x)
 );
 
 hex7seg M9(
